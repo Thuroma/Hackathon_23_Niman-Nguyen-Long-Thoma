@@ -84,3 +84,7 @@ li:last-child {
     border-right: none;
     border-left: 1px solid rgb(44, 97, 25);
 }
+
+#logout-button {
+    float: right;
+}
