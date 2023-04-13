@@ -10,5 +10,13 @@ def login():
 def homepage():
     return render_template('homepage.html')
 
+@app.route('/account_info')
+def account_info_page():
+    return render_template('account_info.html')
+
+@app.route('/commitments')
+def commitments_page():
+    return render_template('commitments.html')
+
 if __name__ == '__main__':
     app.run()
