@@ -6,7 +6,7 @@
 
 <p class="text-center">Incentive students to volunteer!</p>
 
-<form class="text-center" method="GET" action="/" onsubmit="return validateForm()">
+<form class="text-center" method="GET" action="/homepage" onsubmit="return validateForm()">
 <label for="username">Username:</label> 
 <br>
 <input id="username" name="username" class="form-control" placeholder="Username">
@@ -15,7 +15,7 @@
 <br>
 <input type="password" id="password" name="password" class="form-control" placeholder="Password">
 <br>
-<input class="btn btn-success" id="submit-button" type="submit" value="Login" />
+<input class="btn btn-success" id="login-button" type="submit" value="Login" />
 </form>
 
 <script>
@@ -33,6 +33,10 @@ function validateForm() {
         return false;
     }
     return true;
+
+    document.getElementById("login-button").onclick = function () {
+        location.href = "location.href='homepage.html";
+    };
 }
 </script>
 {% endblock %}
