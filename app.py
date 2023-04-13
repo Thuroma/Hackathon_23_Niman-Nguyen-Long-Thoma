@@ -8,7 +8,8 @@ def login():
 
 @app.route('/homepage')
 def homepage():
-    return render_template('homepage.html')
+    username = request.args.get('username')
+    return render_template('homepage.html',username=username)
 
 @app.route('/account_info')
 def account_info_page():
