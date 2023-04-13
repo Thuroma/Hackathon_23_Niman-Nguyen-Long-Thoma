@@ -13,7 +13,3 @@
 3. Run app
 
 `flask run`
-
-4. Add code and templates
-
-You'll work in app.py, github_api.py and with files in the templates directory.
