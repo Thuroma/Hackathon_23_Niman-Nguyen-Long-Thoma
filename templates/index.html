@@ -1,15 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GitHub API App</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
-</head>
-<body>
+{% extends "base.html" %}
 
-    <h1>TODO - complete this page</h1>
-    
-</body>
-</html>
+{% block content %}
+<div class="content m-4 center-block">
+    <h1>Volunteer Incentive App</h1>
+
+<p class="text-center">Incentive students to volunteer!</p>
+
+<form class="text-center" method="GET" action="/homepage" onsubmit="return validateForm()">
+<label for="username">Username:</label> 
+<br>
+<input id="username" name="username" class="form-control" placeholder="Username">
+<br>
+<label for="password">Password:</label> 
+<br>
+<input type="password" id="password" name="password" class="form-control" placeholder="Password">
+<br>
+<input class="btn btn-success" id="login-button" type="submit" value="Login" />
+</form>
+
+<script>
+function validateForm() {
+    var username = document.getElementById("username").value;
+    if (username == "") {
+        alert("Please enter your Username");
+        return false;
+    }
+    return true;
+
+    var password = document.getElementById("password").value;
+    if (password == "") {
+        alert("Please enter your Password");
+        return false;
+    }
+    return true;
+
+    document.getElementById("login-button").onclick = function () {
+        location.href = "location.href='homepage.html";
+    };
+}
+</script>
+{% endblock %}
+  
