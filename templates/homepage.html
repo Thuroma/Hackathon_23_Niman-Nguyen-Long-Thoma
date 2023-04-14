@@ -24,7 +24,7 @@
     <th>Balance</th>
     <th>Standing</th>
   </tr>
-  <tr>
+  <tr onclick="handleClick()">
     <!-- Demand Deposit Account (checking) -->
     <td>{{ account_data[1]['description'] }}</td>
     <td>{{ account_data[1]['accountType'] }}</td>
@@ -102,7 +102,11 @@
 </div>
 
 <script>
-    var username = document.getElementById("username").value;
+    {% comment %} var username = document.getElementById("username").value; {% endcomment %}
+    function handleClick() {
+      alert("Click")
+  }
+
 </script>
 
 {% endblock %}
