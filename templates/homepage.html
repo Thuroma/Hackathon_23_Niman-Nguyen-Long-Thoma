@@ -10,13 +10,95 @@
     </ul>
 </div>
 
-<div>
-    <p>{{ account_info }}</p>
-    <p>{{ customer_info }}</p>
+
+<div class="homepage">
+    <div class="welcome-div">
+        <h1>Welcome {{ username }}</h1>
+    </div>
+<div class="tables-div">
+    <h2 class="table-header">Accounts</h2>
+<table>
+  <tr>
+    <th>Account Name</th>
+    <th>Account Type</th>
+    <th>Balance</th>
+    <th>Standing</th>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
+</div>
+<br>
+
+
+<div class="tables-div">
+    <h2 class="table-header">Enrolled Commitments</h2>
+    <table>
+        <tr>
+          <th>Organization Name</th>
+          <th>Commitment Availability</th>
+          <th>Percent Change</th>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+</div>
 
 </div>
 
-
+<script>
+    var username = document.getElementById("username").value;
+</script>
 
 {% endblock %}
-  
