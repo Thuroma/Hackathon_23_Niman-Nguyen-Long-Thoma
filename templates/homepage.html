@@ -1,68 +1,65 @@
-{% extends "base.html" %}
-
-{% block content %}
+{% extends "base.html" %} {% block content %}
 <div class="navigation-bar">
-    <ul id="navigation-bar">
-        <li><a class="active" href="/homepage">Home</a></li>
-        <li><a href="/commitments">Commitments</a></li>
-        <li><a href="/account_info">Account Info</a></li>
-        <li id="logout-button"><a href="/">Log Out</a></li>
-    </ul>
+  <ul id="navigation-bar">
+    <li><a class="active" href="/homepage">Home</a></li>
+    <li><a href="/commitments">Commitments</a></li>
+    <li><a href="/account_info">Account Info</a></li>
+    <li id="logout-button"><a href="/">Log Out</a></li>
+  </ul>
 </div>
-
 
 <div class="homepage">
-    <div class="welcome-div">
-        <h1>Welcome {{ username }}</h1>
-    </div>
-<div class="tables-div">
+  <div class="welcome-div">
+    <h1>Welcome {{ username }}</h1>
+  </div>
+  <div class="tables-div">
     <h2 class="table-header">Accounts</h2>
-<table>
-  <tr>
-    <th>Account Name</th>
-    <th>Account Type</th>
-    <th>Balance</th>
-    <th>Standing</th>
-  </tr>
-  <tr>
-    <!-- Demand Deposit Account (checking) -->
-    <td>{{ account_data[1]['description'] }}</td>
-    <td>{{ account_data[1]['accountType'] }}</td>
-    <td>${{ account_data[1]['availableBalance'] }}</td>
-    <td></td>
-  </tr>
-  <tr>
-    <!-- Demand Deposit Account (checking) -->
-    <td>{{ account_data[3]['description'] }}</td>
-    <td>{{ account_data[3]['accountType'] }}</td>
-    <td>${{ account_data[3]['availableBalance'] }}</td>
-    <td></td>
-  </tr>
-  <tr>
-    <!-- Savings Account -->
-    <td>{{ account_data[2]['description'] }}</td>
-    <td>{{ account_data[2]['accountType'] }}</td>
-    <td>${{ account_data[2]['availableBalance'] }}</td>
-    <td></td>
-  </tr>
-  <tr>
-    <!-- Consumer Credit Card -->
-    <td>{{ account_data[0]['description'] }}</td>
-    <td>{{ account_data[0]['accountType'] }}</td>
-    <td>${{ account_data[0]['currentBalance'] }}</td>
-    <td></td>
-  </tr>
-</table>
-</div>
-<br>
 
-<div class="tables-div2">
-  <h2 class="table-header">Goals</h2>
-  <table>
+    <div class="item-container">
+      <div class="item-header">
+        <div class="item-name">Account Name</div>
+        <div class="item-quantity">Account Type</div>
+        <div class="item-price">Balance</div>
+      </div>
+      {%for account in account_data%}
+      <div dense bordered padding class="rounded-borders item-row" id="test">
+        <div class="item-desc">{{ account['description'] }}</div>
+        <div class="item-quantity">{{ account['accountType'] }}</div>
+        <div class="item-price">${{ account['availableBalance'] }}</div>
+      </div>
+
+      {%endfor%}
+    </div>
+  </div>
+  <br />
+
+  <div class="tables-div">
+    <h2 class="table-header">Enrolled Commitments</h2>
+    <table>
       <tr>
-        <th></th>
-        <th></th>
-        <th></th>
+        <th>Organization Name</th>
+        <th>Commitment Availability</th>
+        <th>Percent Change</th>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
       </tr>
       <tr>
         <td></td>
@@ -70,48 +67,14 @@
         <td></td>
       </tr>
     </table>
-</div>
-
-<div class="tables-div">
-    <h2 class="table-header">Account Transactions</h2>
-    <table>
-        <tr>
-          <th>Date</th>
-          <th>Description</th>
-          <th>Roundup</th>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-
+  </div>
 </div>
 
 <script>
-    var username = document.getElementById("username").value;
+  var username = document.getElementById("username").value;
+  document.getElementById("test").onclick = function(){
+    alert("you clicked me")
+  }
 </script>
 
 {% endblock %}
