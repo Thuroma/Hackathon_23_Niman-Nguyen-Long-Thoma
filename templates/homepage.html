@@ -25,27 +25,31 @@
     <th>Standing</th>
   </tr>
   <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
+    <!-- Demand Deposit Account (checking) -->
+    <td>{{ account_data[1]['description'] }}</td>
+    <td>{{ account_data[1]['accountType'] }}</td>
+    <td>${{ account_data[1]['availableBalance'] }}</td>
     <td></td>
   </tr>
   <tr>
-    <td></td>
-    <td></td>
-    <td></td>
+    <!-- Demand Deposit Account (checking) -->
+    <td>{{ account_data[3]['description'] }}</td>
+    <td>{{ account_data[3]['accountType'] }}</td>
+    <td>${{ account_data[3]['availableBalance'] }}</td>
     <td></td>
   </tr>
   <tr>
+    <!-- Savings Account -->
+    <td>{{ account_data[2]['description'] }}</td>
+    <td>{{ account_data[2]['accountType'] }}</td>
+    <td>${{ account_data[2]['availableBalance'] }}</td>
     <td></td>
-    <td></td>
-    <td></td>
+  </tr>
+  <tr>
+    <!-- Consumer Credit Card -->
+    <td>{{ account_data[0]['description'] }}</td>
+    <td>{{ account_data[0]['accountType'] }}</td>
+    <td>${{ account_data[0]['currentBalance'] }}</td>
     <td></td>
   </tr>
   <tr>

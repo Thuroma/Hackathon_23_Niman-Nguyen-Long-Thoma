@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request  # NOT the same as requests 
 from apis import coreBanking
+from pprint import pprint
 
 app = Flask(__name__)
 
@@ -10,7 +11,15 @@ def login():
 @app.route('/homepage')
 def homepage():
     username = request.args.get('username')
-    return render_template('homepage.html',username=username)
+
+    # Account info data
+    account_data = coreBanking.get_customer_account_info()
+    pprint(account_data)
+
+    return render_template('homepage.html',
+                            username=username,
+                            account_data=account_data
+                            )
 
 @app.route('/account_info')
 def account_info_page():
