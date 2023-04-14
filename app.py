@@ -13,8 +13,30 @@ def homepage():
     username = request.args.get('username')
 
     # Account info data
-    account_data = coreBanking.get_customer_account_info()
-    pprint(account_data)
+    # account_data = coreBanking.get_customer_account_info()
+    account_data = [
+        {
+        'description': 'Checkings Account 1010',
+        'accountType': 'DEB',
+        'availableBalance': '9000'
+        },
+        {
+        'description': 'Checkings Account 4320',
+        'accountType': 'DEB',
+        'availableBalance': '4500'
+        },
+        {
+        'description': 'Savings Account',
+        'accountType': 'SAV',
+        'availableBalance': '7000'
+        },
+        {
+        'description': 'Credit Card Account',
+        'accountType': 'CRE',
+        'availableBalance': '3000'
+        },
+
+    ]
 
     return render_template('homepage.html',
                             username=username,
