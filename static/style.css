@@ -108,3 +108,7 @@ table {
   tr:nth-child(even) {
     background-color: #dddddd;
   }
+
+  .tables-div2 table tr{
+    background-color: #85bb65;
+  }
