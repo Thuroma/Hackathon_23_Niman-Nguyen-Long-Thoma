@@ -10,7 +10,7 @@
 
 <div class="homepage">
   <div class="welcome-div">
-    <h1>Welcome {{ username }}</h1>
+    <h1>Welcome Clara</h1>
   </div>
   <div class="tables-div">
     <h2 class="table-header">Accounts</h2>
@@ -36,16 +36,25 @@
   <br />
   <div class="tables-div2">
     <h2 class="table-header">Goals</h2>
-    <table>
-        <tr>
-          <th>Volunteering Goal</th>
-          <th>% Yield Goal</th>
-        </tr>
-        <tr>
-          <td>You have volunteered 4 out of 6 days this month. You're almost at your goal!</td>
-          <td>3.4%</td>
-        </tr>
-      </table>
+
+
+    <div class="item-container">
+      <div dense bordered padding class="rounded-borders item-row" id="test">
+        <div class="item-desc">Volunteering Goal</div>
+        <div class="item-quantity">% Yield Goal</div>
+      </div>
+      <div class="item-header">
+        <div class="item-name">
+          4/6 days were volunteered this month, You're almost at your Goal
+        </div>
+        <div class="item-quantity">3.4%</div>
+      </div>
+
+
+
+
+
+    </div>
   </div>
   <div class="tables-div">
     <h2 class="table-header">Account Transactions</h2>
@@ -55,22 +64,22 @@
         <div class="item-quantity">Account Type</div>
         <div class="item-price">Balance</div>
       </div>
-    {%for tran in transaction_data%}
-    <div dense bordered padding class="rounded-borders item-row" id="test">
-      <div  class="item-desc">{{ tran['transactionID'] }}</div>
-      <div class="item-quantity">{{ tran['channel'] }}</div>
-      <div class="item-price">${{ tran['amount'] }}</div>
+      {%for tran in transaction_data%}
+      <div dense bordered padding class="rounded-borders item-row" id="test">
+        <div class="item-desc">{{ tran['transactionID'] }}</div>
+        <div class="item-quantity">{{ tran['channel'] }}</div>
+        <div class="item-price">${{ tran['amount'] }}</div>
+      </div>
+      {%endfor%}
     </div>
-    {%endfor%}
-    
   </div>
+
+  <script>
+    var username = document.getElementById("username").value;
+    document.getElementById("test").onclick = function () {
+      alert("you clicked me");
+    };
+  </script>
+
+  {% endblock %}
 </div>
-
-<script>
-  var username = document.getElementById("username").value;
-  document.getElementById("test").onclick = function(){
-    alert("you clicked me")
-  }
-</script>
-
-{% endblock %}

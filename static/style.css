@@ -262,7 +262,11 @@ td {
     border: 1px solid #ccc;
     border-radius: 0.5rem;
     overflow: hidden;
+    margin: 50px;
+    padding: 50px;
   }
+
+
   
   .item-header {
     display: flex;
