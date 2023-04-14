@@ -1,12 +1,3 @@
-.content {
-    /* max-width: 500px;
-    margin: 0 auto;
-    background-color: rgb(182, 248, 226);
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
-}
 
 h1 {
     font-size: 2.5rem;
@@ -54,18 +45,6 @@ input[type="submit"]:hover {
 
 /* Navigation bar */
 #navigation-bar {
-    /* background-color: #97df98;
-    list-style-type: none;
-    overflow: hidden;
-    margin: 0;
-    padding: 0; */
-
-    /* 
-    
-    
-    */
-
-    /* background-color: #97df98; */
     list-style-type: none;
     overflow: hidden;
     margin: 0;
@@ -91,18 +70,6 @@ li a {
     text-decoration: none;
 }
 
-/* #logout-button:hover{
-    background-color: #9b2f2f;
-    color: #fff;
-    transition: all 0.4s ease-in-out;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    border-radius: 1rem;
-    transform: scale(0.9);
-    box-shadow: 0 3px 15px -2px #9b2f2f;
-} */
-
 #navigation-bar li a:hover {
     /* background-color: rgb(97, 158, 99); */
 
@@ -117,12 +84,6 @@ li a {
     box-shadow: 0 3px 15px -2px rgb(135, 195, 137);
     text-decoration: none;
 }
-
-/* Let user know what tap they are visiting */
-/* .active, #navigation-bar li a:hover {
-    background-color: #666;
-    color: white;
-  } */
 
 li:last-child {
     border-right: none;
@@ -141,8 +102,6 @@ table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 100%;
-
-    
 }
 
 td,
@@ -234,7 +193,6 @@ body {
     color: #333;
     line-height: 1.5;
 }
-
 
 td {
     padding-left: 3%;
