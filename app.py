@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request  # NOT the same as requests 
+from apis import coreBanking
 
 app = Flask(__name__)
 
@@ -8,7 +9,14 @@ def login():
 
 @app.route('/homepage')
 def homepage():
-    return render_template('homepage.html')
+    account_info = coreBanking.get_customer_account_info()
+    customer_info = coreBanking.get_customer_personal_info()
+
+    
+    return render_template('homepage.html',
+                            account_info=account_info,
+                            customer_info=customer_info,
+                            )
 
 @app.route('/account_info')
 def account_info_page():
